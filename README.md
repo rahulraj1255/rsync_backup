@@ -6,11 +6,14 @@ rsync does a great job of syncing but still it lacks some features as delete sim
 This script is to solve the problem of having information syncronous in multiple linux installations.
 
 
-USAGE:
-Create a new folder with name .rsync_backup in your home directory
+###USAGE:
+  Create a new folder with name .rsync_backup in your home directory
 Copy this script in it. Also create two text files "include-data.txt" and "exclude-data.txt" containing information as to which files and folders should be excluded from sync and if some specific files are to be synced which are excluded in exclude-data.txt.
 
-Suppose if your home contains fod1/fode{1..2}/file{1..3} and you want to exclude fode1/ but include fod1/fode1/file1 your text files should be like:
+Suppose if your home contains fod1/fode{1..2}/file{1..3} and you want to exclude fode1/ but include fod1/fode1/file1 your text files should be like
+
+
+```
 "include-data.txt"
 /fod1/
 /fod1/fode1/
@@ -18,3 +21,6 @@ Suppose if your home contains fod1/fode{1..2}/file{1..3} and you want to exclude
 
 "exclude-data.txt"
 fod1/fode1/
+```
+
+Don't forget to change the mount point variables at the beginning of the script
